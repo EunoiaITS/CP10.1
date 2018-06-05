@@ -13,12 +13,12 @@
                             </div>
                             <div class="form-group">
                                 <label class="fleft-label" for="selected-value"> MIT / PRN / PR <span class="fright">:</span></label>
-                                <select name="select_field" id="selected-field" class="fright-input">
+                                <select name="select_field" id="selected-field"  class="input-bill fright-input" style="float:left">
                                     <option value="MIT">MIT</option>
                                     <option value="PRN">PRN</option>
                                     <option value="PR">PR</option>
                                 </select>
-                                <input type="text" name="select_val" id="selected-value" class=" fright-input">
+                                <input type="text" name="select_val" id="selected-value"  class="input-bill fright-input" style="float:left">
                             </div>
                              <div id="hidden">
                              </div>
