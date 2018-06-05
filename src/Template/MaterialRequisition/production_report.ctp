@@ -47,7 +47,7 @@
                     <tbody class="csn-text-up">
                     <?php foreach($mr as $m): ?>
                         <?php $count = 0; foreach($m->items as $item): $count++; ?>
-                    <form method="post" action="<?php echo $this->url->build(['controller' => 'MaterialRequisition', 'action' => 'productionReport']); ?>">
+                    <form method="post" action="<?php echo $this->Url->build(['controller' => 'MaterialRequisition', 'action' => 'productionReport']); ?>">
                             <tr>
                                 <td><?= $count ?><input type="hidden" name="prod_mr_id" value="<?= $item->id ?>"></td>
                                 <td><?= $m->date ?></td>

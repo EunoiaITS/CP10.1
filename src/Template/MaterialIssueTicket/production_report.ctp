@@ -46,7 +46,7 @@ Production Planner page
                             <tbody class="csn-text-up">
                             <?php $i=0; foreach ($mit as $m): ?>
                                 <?php $i++;?>
-                            <form method="post" action="<?php echo $this->url->build(['controller' => 'MaterialIssueTicket', 'action' => 'productionReport']); ?>">
+                            <form method="post" action="<?php echo $this->Url->build(['controller' => 'MaterialIssueTicket', 'action' => 'productionReport']); ?>">
                                 <tr>
                                     <td><?= $i ?><input type="hidden" name="prod_mit_id" value="<?= $m->id ?>"></td>
                                     <td><?= $m->sales->salesorder_no ?></td>
