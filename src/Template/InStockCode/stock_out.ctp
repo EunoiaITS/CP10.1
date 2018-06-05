@@ -11,18 +11,18 @@
                                 <label class="fleft-label" for="date" >Date<span class="fright">:</span></label>
                                 <input name="date" type="text" class="form-control fright-input" id="date" value="<?php echo date('Y-m-d'); ?>">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group clearfix">
                                 <label class="fleft-label" for="selected-value"> MIT / PRN / PR <span class="fright">:</span></label>
-                                <select name="select_field" id="selected-field" class="fright-input">
+                                <select name="select_field" id="selected-field"  class="fright-input input-stock">
                                     <option value="MIT">MIT</option>
                                     <option value="PRN">PRN</option>
                                     <option value="PR">PR</option>
                                 </select>
-                                <input type="text" name="select_val" id="selected-value" class=" fright-input">
+                                <input type="text" name="select_val" id="selected-value"  class="fright-input input-stock">
                             </div>
                              <div id="hidden">
                              </div>
-                            <div class="form-group">
+                            <div class="form-group clearfix">
                                 <label class="fleft-label" for="tender">Tender No <span class="fright">:</span></label>
                                 <input name="tender_no" type="text" class="form-control fright-input" id="tender">
                             </div>
@@ -144,7 +144,7 @@
                 <h4 class="modal-title">BARCODE - STOCK OUT</h4>
             </div>
             <div class="modal-body">
-                <div class="clearfix">
+                <div class="clearfix table-part">
                     <table class="table table-bordered">
                         <thead>
                         <tr>

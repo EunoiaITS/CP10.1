@@ -34,9 +34,9 @@ class ProdMitReportTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('prod_mit_report');
-        $this->setDisplayField('id');
-        $this->setPrimaryKey('id');
+        $this->table('prod_mit_report');
+        $this->displayField('id');
+        $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
     }

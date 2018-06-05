@@ -31,14 +31,7 @@ class ProdMrReport extends Entity
      * @var array
      */
     protected $_accessible = [
-        'prod_mr_id' => true,
-        'date' => true,
-        'del_qty' => true,
-        'ack_status' => true,
-        'del_status' => true,
-        'received_by' => true,
-        'created' => true,
-        'modified' => true,
-        'prod_mr' => true
+        '*' => true,
+        'id' => false
     ];
 }
