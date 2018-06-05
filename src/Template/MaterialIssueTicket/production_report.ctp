@@ -70,7 +70,7 @@ Production Planner page
                                         </select>
                                     </td>
                                     <td><?= $pic ?><input type="hidden" name="received_by" value="<?= $pic ?>"></td>
-                                    <td><input type="text" name="date" class="form-control" value="<?php if(isset($m->inStore)){echo date('Y-m-d', strtotime($m->inStore->date));}else{echo date('Y-m-d');} ?>"  style="min-width: 100px"></td>
+                                    <td><input type="text" name="date" class="form-control datepicker-f" value="<?php if(isset($m->inStore)){echo date('Y-m-d', strtotime($m->inStore->date));}else{echo date('Y-m-d');} ?>"  style="min-width: 100px"></td>
                                     <td  class="colored-csn">
                                         <select name="del_status" class="form-control"  style="min-width: 100px">
                                             <option value="">Please select...</option>
