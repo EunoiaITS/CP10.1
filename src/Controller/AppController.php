@@ -134,24 +134,24 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['view', 'display', 'searchApi', 'stockAvailable', 'productionReport']);
+        $this->Auth->allow(['view', 'display', 'searchApi', 'stockAvailable']);
     }
 
     public function isAuthorized($user){
         if(isset($user['role']) && $user['role'] == 'admin'){
-            $allowedActions = ['search', 'addItems', 'addStockOut', 'add', 'report', 'index', 'logout', 'stockOut', 'view', 'edit','dashboard', 'getCurrentBalance'];
+            $allowedActions = ['search', 'addItems', 'addStockOut', 'add', 'report', 'index', 'logout', 'stockOut', 'view', 'edit','dashboard', 'getCurrentBalance', 'productionReport'];
             if(in_array($this->request->action, $allowedActions)){
                 return true;
             }
         }
         if(isset($user['role']) && $user['role'] == 'store-manager'){
-            $allowedActions = ['index', 'requested', 'report', 'approve', 'logout', 'view','dashboard'];
+            $allowedActions = ['index', 'requested', 'report', 'approve', 'logout', 'view','dashboard', 'productionReport'];
             if(in_array($this->request->action, $allowedActions)){
                 return true;
             }
         }
         if(isset($user['role']) && ($user['role'] == 'verifier' || $user['role'] == 'approver')){
-            $allowedActions = ['index', 'requested', 'report', 'approve', 'logout', 'view','dashboard','edit','verify','approve'];
+            $allowedActions = ['index', 'requested', 'report', 'approve', 'logout', 'view','dashboard','edit','verify','approve', 'productionReport'];
             if(in_array($this->request->action, $allowedActions)){
                 return true;
             }

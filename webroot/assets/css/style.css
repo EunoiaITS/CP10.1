@@ -100,6 +100,13 @@ a:focus{
     margin-left: 35%;
     height: 38px;
 }
+.fright-input.input-stock {
+    width: 31%;
+    float: left;
+    margin-bottom: 12px;
+    margin-right: 14px;
+    height: 37px;
+}
 
 
 
