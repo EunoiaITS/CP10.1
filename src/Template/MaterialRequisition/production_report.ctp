@@ -68,7 +68,7 @@
                                     </select>
                                 </td>
                                 <td><?= $pic ?><input type="hidden" name="received_by" value="<?= $pic ?>"></td>
-                                <td><input type="text" name="date" class="form-control" value="<?php if(isset($item->inStore)){echo date('Y-m-d', strtotime($item->inStore->date));}else{echo date('Y-m-d');} ?>"  style="min-width: 100px"></td>
+                                <td><input type="text" name="date" class="form-control datepicker-f" value="<?php if(isset($item->inStore)){echo date('Y-m-d', strtotime($item->inStore->date));}else{echo date('Y-m-d');} ?>"  style="min-width: 100px"></td>
                                 <td><input type="number" class="form-control" name="del_qty" min="1" value="<?php if(isset($item->inStore)){echo $item->inStore->del_qty;} ?>" style="min-width: 50px"></td>
                                 <td>
                                     <select name="del_status" class="form-control"  style="min-width: 100px">
