@@ -3,10 +3,8 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- bootstrap js -->
 <script src="<?php echo $this->request->webroot.'assets/js/bootstrap.min.js'; ?>"></script>
-<!-- moment js -->
-<script src="<?php echo $this->request->webroot.'assets/js/moment.js'; ?>"></script>
 <!-- date-time js -->
-<script src="<?php echo $this->request->webroot.'assets/js/bootstrap-datetimepicker.min.js'; ?>"></script>
+<script src="<?php echo $this->request->webroot.'assets/js/bootstrap-datepicker.min.js'; ?>"></script>
 <!-- Print js -->
 <script src="<?php echo $this->request->webroot.'assets/js/jQuery.print.js'; ?>"></script>
 <!-- Print js -->
