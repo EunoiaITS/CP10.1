@@ -28,26 +28,28 @@
         Datepicker init
       =========================================*/
 
-      $('.datepicker-f').datetimepicker({
-        format: "YYYY-MM-DD",
-        icons: {
-          up: 'fa fa-angle-up',
-          down: 'fa fa-angle-down',
-          previous: 'fa fa-angle-left',
-          next: 'fa fa-angle-right',
-        }
-      });
+      $('.datepicker-f').datepicker({
+            format: 'yyyy-dd-mm',
+            todayHighlight: true,
+            icons: {
+              up: 'fa fa-angle-up',
+              down: 'fa fa-angle-down',
+              previous: 'fa fa-angle-left',
+              next: 'fa fa-angle-right',
+            }
+        });
 
       /*=======================================
         Timepicker init 
       =========================================*/
 
-        $('.timepicker-f').datetimepicker({
-        format: "HH:mm A",
-        icons: {
-          up: 'fa fa-angle-up',
-          down: 'fa fa-angle-down',
-          previous: 'fa fa-angle-left',
-          next: 'fa fa-angle-right',
-        }
-      });
+        $('.timepicker-f').datepicker({
+            format: 'yyyy-dd-mm',
+            todayHighlight: true,
+            icons: {
+              up: 'fa fa-angle-up',
+              down: 'fa fa-angle-down',
+              previous: 'fa fa-angle-left',
+              next: 'fa fa-angle-right',
+            }
+        });
