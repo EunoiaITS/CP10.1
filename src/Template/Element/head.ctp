@@ -7,6 +7,7 @@
 <link rel="shortcut icon" href="<?php echo $this->request->webroot.'assets/img/lol.ico'; ?>" type="image/x-icon">
 <!-- style css-->
 <link rel="stylesheet" href="<?php echo $this->request->webroot.'assets/css/bootstrap.min.css'; ?>">
+<link rel="stylesheet" href="<?php echo $this->request->webroot.'assets/css/bootstrap-datepicker.css'; ?>">
 <!-- iconfont css -->
 <link rel="stylesheet" href="<?php echo $this->request->webroot.'assets/css/font-awesome.min.css'; ?>">
 <!-- main css -->
