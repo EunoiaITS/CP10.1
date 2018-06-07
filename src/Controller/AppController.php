@@ -47,8 +47,8 @@ class AppController extends Controller
         $this->loadComponent('Auth', [
             'authorize' => ['Controller'],
             'loginRedirect' => [
-                'controller' => 'GTR',
-                'action' => 'dashboard'
+                'controller' => 'Dashboard',
+                'action' => 'index'
             ],
             'logoutRedirect' => [
                 'controller' => 'Users',
@@ -56,8 +56,8 @@ class AppController extends Controller
                 'home'
             ],
             'unauthorizedRedirect' => [
-                'controller' => 'GTR',
-                'action' => 'dashboard',
+                'controller' => 'Dashboard',
+                'action' => 'index',
                 'prefix' => false
             ]
         ]);
@@ -66,8 +66,7 @@ class AppController extends Controller
          * Enable the following components for recommended CakePHP security settings.
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
          */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+
     }
 
     /**
@@ -114,6 +113,13 @@ class AppController extends Controller
         $gtrReqCount = $this->Gtr->find('all')
             ->where(['stat' => 'pending'])
             ->count();
+        $this->loadModel('ManualStocks');
+        $msReqCount = $this->ManualStocks->find('all')
+            ->where(['status' => 'requested'])
+            ->count();
+        $msVerCount = $this->ManualStocks->find('all')
+            ->where(['status' => 'verified'])
+            ->count();
         $this->loadComponent('Auth');
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
@@ -130,6 +136,8 @@ class AppController extends Controller
         $this->set('scnReqCount', $scnReqCount);
         $this->set('gpReqCount', $gpReqCount);
         $this->set('gtrReqCount', $gtrReqCount);
+        $this->set('msReqCount', $msReqCount);
+        $this->set('msVerCount', $msVerCount);
     }
 
     public function beforeFilter(Event $event)
