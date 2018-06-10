@@ -129,4 +129,113 @@ class InventoryController extends AppController
         ]);
         $this->set('ms',$ms);
     }
+
+    public function invRecord(){
+        $urlToEng = 'http://engmodule.acumenits.com/api/all-bom-parts';
+        $optionsForEng = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'GET'
+            ]
+        ];
+        $contextForEng  = stream_context_create($optionsForEng);
+        $resultFromEng = file_get_contents($urlToEng, false, $contextForEng);
+        if ($resultFromEng === FALSE) {
+            echo 'ERROR!!';
+        }
+        $dataFromEng = json_decode($resultFromEng);
+        if($dataFromEng != null ){
+            foreach ($dataFromEng as $data){
+                $this->loadModel('ProductMasterlist');
+                $pm = $this->ProductMasterlist->find('all')
+                    ->where(['part_no' => $data->partNo])
+                    ->where(['part_name'=> $data->partName]);
+                $data->pm = $pm;
+            }
+        }
+        $this->set('data',$dataFromEng);
+    }
+
+    public function stockInRecord(){
+        $urlToEng = 'http://engmodule.acumenits.com/api/all-bom-parts';
+        $optionsForEng = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'GET'
+            ]
+        ];
+        $contextForEng  = stream_context_create($optionsForEng);
+        $resultFromEng = file_get_contents($urlToEng, false, $contextForEng);
+        if ($resultFromEng === FALSE) {
+            echo 'ERROR!!';
+        }
+        $dataFromEng = json_decode($resultFromEng);
+        if($dataFromEng != null ){
+            foreach ($dataFromEng as $data){
+                $this->loadModel('ProductMasterlist');
+                $pm = $this->ProductMasterlist->find('all')
+                    ->where(['part_no' => $data->partNo])
+                    ->where(['part_name'=> $data->partName]);
+                $data->pm = $pm;
+            }
+        }
+        $this->set('data',$dataFromEng);
+    }
+
+    public function stockOutRecord(){
+        $urlToEng = 'http://engmodule.acumenits.com/api/all-bom-parts';
+        $optionsForEng = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'GET'
+            ]
+        ];
+        $contextForEng  = stream_context_create($optionsForEng);
+        $resultFromEng = file_get_contents($urlToEng, false, $contextForEng);
+        if ($resultFromEng === FALSE) {
+            echo 'ERROR!!';
+        }
+        $dataFromEng = json_decode($resultFromEng);
+        if($dataFromEng != null ){
+            foreach ($dataFromEng as $data){
+                $this->loadModel('ProductMasterlist');
+                $pm = $this->ProductMasterlist->find('all')
+                    ->where(['part_no' => $data->partNo])
+                    ->where(['part_name'=> $data->partName]);
+                $data->pm = $pm;
+            }
+        }
+        $this->set('data',$dataFromEng);
+    }
+
+    public function agingReport(){
+        $urlToEng = 'http://engmodule.acumenits.com/api/all-bom-parts';
+        $optionsForEng = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'GET'
+            ]
+        ];
+        $contextForEng  = stream_context_create($optionsForEng);
+        $resultFromEng = file_get_contents($urlToEng, false, $contextForEng);
+        if ($resultFromEng === FALSE) {
+            echo 'ERROR!!';
+        }
+        $dataFromEng = json_decode($resultFromEng);
+        if($dataFromEng != null ){
+            foreach ($dataFromEng as $data){
+                $this->loadModel('ProductMasterlist');
+                $this->loadModel('InStockCode');
+                $pm = $this->ProductMasterlist->find('all')
+                    ->where(['part_no' => $data->partNo])
+                    ->where(['part_name'=> $data->partName]);
+                $data->pm = $pm;
+                $ins = $this->InStockCode->find('all')
+                    ->where(['part_no' => $data->partNo])
+                    ->where(['part_name' => $data->partName]);
+                $data->ins = $ins;
+            }
+        }
+        $this->set('data',$dataFromEng);
+    }
 }

@@ -68,6 +68,9 @@
                                         <th>Date</th>
                                         <th>Part No</th>
                                         <th>Part Name</th>
+                                        <th>Zon</th>
+                                        <th>Rack</th>
+                                        <th>Bin</th>
                                         <th>Quantity</th>
                                         <th>PIC Store</th>
                                     </tr>
@@ -201,7 +204,7 @@
                 '</tr>'+
                 '</tbody>'+
                 '</table>'+
-                    '<form id="final-form'+formObj['id']+'">'+
+                '<form id="final-form'+formObj['id']+'">'+
                 '<input name="date" type="hidden" value="'+formObj['date']+'">'+
                 '<input name="part_no" type="hidden" value="'+formObj['part_no']+'">'+
                 '<input name="part_name" type="hidden" value="'+formObj['part_name']+'">'+

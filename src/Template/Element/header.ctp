@@ -96,6 +96,10 @@
                 <?php if ($role == 'verifier' || $role == 'approver'): ?>
                     <li><a href="<?php echo $this->Url->build(['controller' => 'Inventory', 'action' => 'requested']); ?>">Manual Stock List</a></li>
                 <?php endif;?>
+                <li><a href="<?php echo $this->Url->build(['controller' => 'Inventory', 'action' => 'invRecord']); ?>">Store Inventory Record</a></li>
+                <li><a href="<?php echo $this->Url->build(['controller' => 'Inventory', 'action' => 'stockInRecord']); ?>">Store Stock In Item Inventory Record</a></li>
+                <li><a href="<?php echo $this->Url->build(['controller' => 'Inventory', 'action' => 'stockOutRecord']); ?>">Store Stock Out Inventory Record</a></li>
+                <li><a href="<?php echo $this->Url->build(['controller' => 'Inventory', 'action' => 'agingReport']); ?>">Store Inventory Aging Report</a></li>
             </ul>
         </div>
         <div class="btn-group-vertical" role="group" class="dropdown">
