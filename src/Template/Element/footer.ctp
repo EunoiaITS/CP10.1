@@ -54,6 +54,7 @@
                 $('#uom').val(ui.item.uom);
                 $('#min_stock').val(ui.item.min_stock);
                 $('#max_stock').val(ui.item.max_stock);
+                $('#pm_id').val(ui.item.pmId);
             });
         });
     });

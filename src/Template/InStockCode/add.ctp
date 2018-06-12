@@ -7,6 +7,7 @@
                     <div style="height:20px"></div>
                     <div class="col-sm-8 clearfix">
                         <form id="form-data">
+                            <input type="hidden" name="pm_id" id="pm_id" value="">
                             <div class="form-group">
                                 <label class="fleft-label" for="date" >Date<span class="fright">:</span></label>
                                 <input name="date" type="text" class="form-control fright-input" id="date" value="<?php echo date('Y-m-d'); ?>">
@@ -65,6 +66,7 @@
                                     <thead>
                                     <tr>
                                         <th>NO</th>
+                                        <th>Pm Id</th>
                                         <th>Date</th>
                                         <th>Part No</th>
                                         <th>Part Name</th>
@@ -139,7 +141,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">BARCODE- STOCK IN</h4>
                 </div>
             <div class="modal-body" id="modal-data">
             </div>
@@ -173,22 +175,22 @@
                 '<table class="table table-bordered">'+
                 '<tbody>'+
                 '<tr>'+
-                '<td>2</td>'+
+                '<td>1</td>'+
                 '<td>IN STOCK CODE</td>'+
                 '<td>201605140001</td>'+
                 '</tr>'+
                 '<tr>'+
-                '<td>3</td>'+
+                '<td>2</td>'+
                 '<td>DATE</td>'+
                 '<td>'+formObj['date']+'</td>'+
                 '</tr>'+
                 '<tr>'+
-                '<td>4</td>'+
+                '<td>3</td>'+
                 '<td>PART NO</td>'+
                 '<td>'+formObj['part_no']+'</td>'+
                 '</tr>'+
                 '<tr>'+
-                '<td>5</td>'+
+                '<td>4</td>'+
                 '<td>PART NAME</td>'+
                 '<td>'+formObj['part_name']+'</td>'+
                 '</tr>'+
@@ -198,7 +200,7 @@
                 '<td>'+formObj['quantity']+'</td>'+
                 '</tr>'+
                 '<tr>'+
-                '<td>5</td>'+
+                '<td>6</td>'+
                 '<td>PIC STORE</td>'+
                 '<td>'+formObj['pic_store']+'</td>'+
                 '</tr>'+
@@ -210,6 +212,7 @@
                 '<input name="part_name" type="hidden" value="'+formObj['part_name']+'">'+
                 '<input name="pic_store" type="hidden" value="'+formObj['pic_store']+'">'+
                 '<input name="quantity" type="hidden" value="'+formObj['quantity']+'">'+
+                '<input name="pm_id" type="hidden" value="'+formObj['pm_id']+'">'+
                 '<input name="stock_code" type="hidden" value="<?php echo date('Ymd'); ?>">'+
                 '<input type="submit" class="btn btn-default pull-right" value="Submit"></form>'+
                 '</div><br>';

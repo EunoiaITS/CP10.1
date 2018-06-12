@@ -7,6 +7,7 @@
                     <div style="height:20px"></div>
                     <div class="col-sm-8 clearfix">
                         <form id="form-data">
+                            <input type="hidden" name="pm_id" id="pm_id" value="">
                             <div class="form-group">
                                 <label class="fleft-label" for="date" >Date<span class="fright">:</span></label>
                                 <input name="date" type="text" class="form-control fright-input" id="date" value="<?php echo date('Y-m-d'); ?>">
@@ -242,6 +243,7 @@
                 '<input name="quantity'+count+'" type="hidden" value="'+$('#quantity').val()+'">'+
                 '<input name="select_val'+count+'" type="hidden" value="'+sel_val+'">'+
                 '<input name="select_field'+count+'" type="hidden" value="'+sel_field+'">'+
+                '<input name="pm_id'+count+'" type="hidden" value="'+$('#pm_id').val()+'">'+
                 '<input name="count" type="hidden" value="'+count+'">';
             $('#modal-data').append(htmlPopup);
         });

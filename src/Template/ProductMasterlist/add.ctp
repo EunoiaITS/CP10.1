@@ -57,6 +57,7 @@
                                 <label class="fleft-label" for="maxlevel">Max Stock Level <span class="fright">:</span></label>
                                 <input  type="text" name="max_stock" class="form-control fright-input" id="maxlevel">
                             </div>
+                            <input id="bom" type="hidden" name="bom_id" value="">
                             <button type="submit" class="btn btn-info">Add</button>
                         </form>
                     </div>
@@ -83,12 +84,14 @@
         });
         $(document).on('autocompleteselect', '.part-no', function(e, ui){
             $('#part-name').val(ui.item.partName);
+            $('#bom').val(ui.item.bomId);
         });
         $(document).on('keydown.autocomplete', '.part-name', function(){
             $(this).autocomplete(part_name_options);
         });
         $(document).on('autocompleteselect', '.part-name', function(e, ui){
             $('#part-no').val(ui.item.partNo);
+            $('#bom').val(ui.item.bomId);
         });
     });
 </script>

@@ -55,6 +55,9 @@ class ProductMasterlistTable extends Table
             ->notEmpty('part_no', 'Part no is required!');
 
         $validator
+            ->notEmpty('bom_id', 'Bom Id is required!');
+
+        $validator
             ->notEmpty('part_name', 'Part name is required!');
 
         $validator

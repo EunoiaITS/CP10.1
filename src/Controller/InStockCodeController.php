@@ -38,8 +38,8 @@ class InStockCodeController extends AppController
         $productMasterlist = $this->ProductMasterlist->find('all');
         $part_no = $part_name = null;
         foreach($productMasterlist as $pm){
-            $part_no .= '{label:"'.$pm->part_no.'",idx:"'.$pm->part_name.'",zon:"'.$pm->zon.'",rack:"'.$pm->rack.'",bn:"'.$pm->bn.'",p_level:"'.$pm->product_level.'",uom:"'.$pm->uom.'",min_stock:"'.$pm->min_stock.'",max_stock:"'.$pm->max_stock.'"},';
-            $part_name .= '{label:"'.$pm->part_name.'",idx:"'.$pm->part_no.'",zon:"'.$pm->zon.'",rack:"'.$pm->rack.'",bn:"'.$pm->bn.'",p_level:"'.$pm->product_level.'",uom:"'.$pm->uom.'",min_stock:"'.$pm->min_stock.'",max_stock:"'.$pm->max_stock.'"},';
+            $part_no .= '{label:"'.$pm->part_no.'",idx:"'.$pm->part_name.'",zon:"'.$pm->zon.'",rack:"'.$pm->rack.'",bn:"'.$pm->bn.'",p_level:"'.$pm->product_level.'",uom:"'.$pm->uom.'",min_stock:"'.$pm->min_stock.'",max_stock:"'.$pm->max_stock.'",pmId:"'.$pm->id.'"},';
+            $part_name .= '{label:"'.$pm->part_name.'",idx:"'.$pm->part_no.'",zon:"'.$pm->zon.'",rack:"'.$pm->rack.'",bn:"'.$pm->bn.'",p_level:"'.$pm->product_level.'",uom:"'.$pm->uom.'",min_stock:"'.$pm->min_stock.'",max_stock:"'.$pm->max_stock.'",pmId:"'.$pm->id.'"},';
         }
         $part_no = rtrim($part_no, ',');
         $part_name = rtrim($part_name, ',');
@@ -76,8 +76,8 @@ class InStockCodeController extends AppController
         $productMasterlist = $this->ProductMasterlist->find('all');
         $part_no = $part_name = null;
         foreach($productMasterlist as $pm){
-            $part_no .= '{label:"'.$pm->part_no.'",idx:"'.$pm->part_name.'"},';
-            $part_name .= '{label:"'.$pm->part_name.'",idx:"'.$pm->part_no.'"},';
+            $part_no .= '{label:"'.$pm->part_no.'",idx:"'.$pm->part_name.'",pmId:"'.$pm->id.'"},';
+            $part_name .= '{label:"'.$pm->part_name.'",idx:"'.$pm->part_no.'",pmId:"'.$pm->id.'"},';
         }
         $part_no = rtrim($part_no, ',');
         $part_name = rtrim($part_name, ',');
@@ -102,6 +102,7 @@ class InStockCodeController extends AppController
             $inStock->pic_store = $this->request->data['pic_store'];
             $inStock->date = $this->request->data['date'];
             $inStock->stock_code = $this->request->data['stock_code'];
+            $inStock->pm_id = $this->request->data['pm_id'];
             if(!ctype_digit($inStock->quantity)){
                 echo 'Quantity must be numeric!';
             }elseif($inStockTable->save($inStock)){
@@ -133,6 +134,7 @@ class InStockCodeController extends AppController
                     $inStock->quantity = $this->request->data['quantity'.$i];
                     $inStock->pic_store = $this->request->data['pic_store'.$i];
                     $inStock->date = $this->request->data['date'.$i];
+                    $inStock->pm_id = $this->request->data['pm_id'.$i];
                     if(!ctype_digit($inStock->quantity)){
                         echo 'Quantity must be numeric!';
                     }elseif($this->StockOut->save($inStock)){

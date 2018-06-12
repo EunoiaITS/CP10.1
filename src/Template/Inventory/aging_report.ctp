@@ -10,7 +10,7 @@
                             <th>NO</th>
                             <th>STOCK-IN Date</th>
                             <th>STOCK-OUT Date</th>
-                            <th>Aging</th>
+                            <th>Aging (Days)</th>
                             <th>Part No</th>
                             <th>Part Name</th>
                             <th>UOM</th>
@@ -24,16 +24,16 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $count = 0;foreach ($data as $d): foreach ($d->pm as $p): $count++;?>
+                        <?php $count = 0;foreach ($pm as $p): $count++;?>
                         <tr>
                             <td><?= $count ?></td>
-                            <td><?php foreach ($d->ins as $i){echo date('Y-m-d',strtotime($i->date)) . '<br/>';} ?></td>
-                            <td></td>
-                            <td></td>
-                            <td><?= $d->partNo ?></td>
-                            <td><?= $d->partName ?></td>
+                            <td><?= date('Y-m-d',strtotime($p->in_date)) ?></td>
+                            <td><?= date('Y-m-d',strtotime($p->out_date)) ?></td>
+                            <td><?php echo $diff = (strtotime($p->out_date) - strtotime($p->in_date)) / (60 * 60 * 24); ?></td>
+                            <td><?= $p->eng->partNo ?></td>
+                            <td><?= $p->eng->partName ?></td>
                             <td><?= $p->uom ?></td>
-                            <td></td>
+                            <td><?= $p->in ?></td>
                             <td><?= $p->zon ?></td>
                             <td><?= $p->rack ?></td>
                             <td><?= $p->bn ?></td>
@@ -41,7 +41,7 @@
                             <td><?= $p->min_stock ?></td>
                             <td><?= $p->max_stock ?></td>
                         </tr>
-                        <?php endforeach;endforeach;?>
+                        <?php endforeach;?>
                         </tbody>
                     </table>
                 </div>

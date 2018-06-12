@@ -30,17 +30,17 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $count = 0;foreach ($data as $d): foreach ($d->pm as $p): $count++;?>
+                        <?php $count = 0;foreach ($pm as $p): $count++;?>
                         <tr>
                             <td><?= $count ?></td>
+                            <td><?= date('Y-m-d',strtotime($p->date)) ?></td>
+                            <td><?= $p->eng->partNo ?></td>
+                            <td><?= $p->eng->partName ?></td>
                             <td></td>
-                            <td><?= $d->partNo ?></td>
-                            <td><?= $d->partName ?></td>
-                            <td></td>
-                            <td>pcs</td>
-                            <td>A</td>
-                            <td>1</td>
-                            <td>1-2</td>
+                            <td><?= $p->in ?></td>
+                            <td><?= ($p->in - $p->out) < 0 ? 0 : ($p->in - $p->out) ?></td>
+                            <td><?= ($p->in +($p->in - $p->out)) < 0 ? 0 : ($p->in +($p->in - $p->out))?></td>
+                            <td><?= $p->created ?></td>
                             <td><?= $p->zon ?></td>
                             <td><?= $p->rack ?></td>
                             <td><?= $p->bn ?></td>
@@ -48,7 +48,7 @@
                             <td></td>
                             <td></td>
                         </tr>
-                        <?php endforeach;endforeach;?>
+                        <?php endforeach;?>
                         </tbody>
                     </table>
                 </div>

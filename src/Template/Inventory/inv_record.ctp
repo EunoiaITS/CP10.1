@@ -1,11 +1,6 @@
 <div class="product-list">
     <div class="container-fluid sm-fluid">
         <div class="row">
-            <?php
-//            echo "<pre>";
-//            print_r($data);
-//            echo "</pre>";
-//            ?>
             <div class="product-masterlist all-list-item clearfix">
                 <h2 class="text-cl tfrom"><b>Store Inventory Record</b></h2>
                 <div class="product-list-table clearfix">
@@ -30,13 +25,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $count = 0;foreach ($data as $d): foreach ($d->pm as $p): $count++;?>
+                        <?php $count = 0;foreach ($pm as $p): $count++;?>
                         <tr>
                             <td><?= $count ?></td>
-                            <td><?= $d->partNo ?></td>
-                            <td><?= $d->partName ?></td>
-                            <td></td>
-                            <td><?= $d->drawingNo ?></td>
+                            <td><?= $p->part_no ?></td>
+                            <td><?= $p->part_name ?></td>
+                            <td><?php if(isset($p->eng->pm->picture)){?><a class="btn btn-primary" target="_blank" alt="Show Image" href="<?= $p->eng->sitelink . $p->eng->pm->picture ?>">Show Image</a><?php }?></td>
+                            <td><?= $p->eng->pm->drawingNo ?></td>
                             <td><?= $p->uom ?></td>
                             <td><?= $p->zon ?></td>
                             <td><?= $p->rack ?></td>
@@ -44,11 +39,11 @@
                             <td><?= $p->product_level ?></td>
                             <td><?= $p->min_stock ?></td>
                             <td><?= $p->max_stock ?></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><?= $p->in ?></td>
+                            <td><?= $p->out ?></td>
+                            <td><?= ($p->in - $p->out) < 0 ? 0 : ($p->in - $p->out) ?></td>
                         </tr>
-                        <?php endforeach;endforeach;?>
+                        <?php endforeach;?>
                         </tbody>
                     </table>
                 </div>

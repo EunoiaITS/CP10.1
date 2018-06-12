@@ -20,9 +20,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($productMasterlist as $productMasterlist): ?>
+                        <?php $count=0; foreach ($productMasterlist as $productMasterlist): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($productMasterlist->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($productMasterlist->part_no) ?></td>
                                 <td><?= h($productMasterlist->part_name) ?></td>
                                 <td><?= h($productMasterlist->zon) ?></td>
