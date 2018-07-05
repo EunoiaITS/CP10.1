@@ -29,7 +29,7 @@ class InventoryController extends AppController
     public function index()
     {
         $this->loadModel('ProductMasterlist');
-        $inventory = $this->paginate($this->ProductMasterlist);
+        $inventory = $this->paginate($this->ProductMasterlist->find('all',['order'=>['ProductMasterlist.created' => 'desc']]));
 
         $this->set(compact('inventory'));
         $this->set('_serialize', ['inventory']);

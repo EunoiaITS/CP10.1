@@ -18,15 +18,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($gpData as $gd): ?>
+                        <?php $count=0; foreach ($gpData as $gd): $count++;?>
                             <tr>
-                                <td><?php echo $gd->id; ?></td>
-                                <td><?php echo $gd->date; ?></td>
-                                <td><?php echo $gd->del_order_no; ?></td>
-                                <td><?php echo $gd->id; ?></td>
-                                <td><?php echo $gd->part_name; ?></td>
-                                <td><?php echo $gd->quantity; ?></td>
-                                <td><?php echo $gd->remarks_prep; ?></td>
+                                <td><?= $count ?></td>
+                                <td><?= $gd->date ?></td>
+                                <td><?= $gd->del_order_no ?></td>
+                                <td><?= $gd->id ?></td>
+                                <td><?= $gd->part_name ?></td>
+                                <td><?= $gd->quantity ?></td>
+                                <td><?= $gd->remarks_prep ?></td>
                                 <td><a class="btn btn-info" href="<?php echo $this->Url->build(['controller' => 'GatePass', 'action' => 'view', $gd->id]); ?>">View</a></td>
                             </tr>
                         <?php endforeach; ?>

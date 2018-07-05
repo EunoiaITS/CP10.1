@@ -35,7 +35,7 @@ class GTRController extends AppController
 
     public function report(){
         $this->loadModel('Gtr');
-        $gtrData = $this->paginate($this->Gtr);
+        $gtrData = $this->paginate($this->Gtr->find('all',['order'=>['Gtr.id'=>'desc']]));
         $this->set(compact('gtrData'));
         $this->set('_serialize', ['gtrData']);
     }

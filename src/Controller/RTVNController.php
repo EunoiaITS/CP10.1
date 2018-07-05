@@ -40,8 +40,7 @@ class RTVNController extends AppController
 
     public function report(){
         $this->loadModel('RtvnReport');
-        $allData = $this->paginate($this->RtvnReport);
-
+        $allData = $this->paginate($this->RtvnReport->find('all',['order'=>['RtvnReport.id'=>'desc']]));
         $this->set(compact('allData'));
         $this->set('_serialize', ['allData']);
     }

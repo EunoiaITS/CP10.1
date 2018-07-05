@@ -127,6 +127,7 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
         $this->set('role', $this->Auth->user('role'));
+        $this->set('userName', $this->Auth->user('username'));
         $this->set('lfgReqCount', $lfgReqCount);
         $this->set('mitReqCount', $mitReqCount);
         $this->set('mrReqCount', $mrReqCount);

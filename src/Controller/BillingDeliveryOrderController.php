@@ -64,7 +64,7 @@ class BillingDeliveryOrderController extends AppController
 
     public function report(){
         $this->loadModel('BdoReport');
-        $nbdoReport = $this->paginate($this->BdoReport);
+        $nbdoReport = $this->paginate($this->BdoReport->find('all',['order'=>['BdoReport.id'=>'desc']]));
         $this->set(compact('nbdoReport'));
         $this->set('_serialize', ['nbdoReport']);
     }

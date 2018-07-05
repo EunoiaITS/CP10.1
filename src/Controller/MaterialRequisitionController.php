@@ -75,7 +75,7 @@ class MaterialRequisitionController extends AppController
 
     public function report(){
         $this->loadModel('MrReport');
-        $dbData = $this->paginate($this->MrReport);
+        $dbData = $this->paginate($this->MrReport->find('all',['order'=>['MrReport.id'=>'desc']]));
         $this->set(compact('dbData'));
         $this->set('_serialize', ['dbData']);
     }

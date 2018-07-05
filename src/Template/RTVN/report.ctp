@@ -22,9 +22,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($allData as $ad): ?>
+                        <?php $count=0; foreach ($allData as $ad): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($ad->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($ad->date) ?></td>
                                 <td><?= h($ad->rtvn_no) ?></td>
                                 <td><?= h($ad->mdr_no) ?></td>

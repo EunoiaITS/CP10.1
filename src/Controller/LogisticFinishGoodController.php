@@ -53,7 +53,7 @@ class LogisticFinishGoodController extends AppController
 
     public function report(){
         //$this->render('report');
-        $logisticFinishGood = $this->paginate($this->LogisticFinishGood);
+        $logisticFinishGood = $this->paginate($this->LogisticFinishGood->find('all',['order'=>['LogisticFinishGood.id'=>'desc']]));
 
         $this->set(compact('logisticFinishGood'));
         $this->set('_serialize', ['logisticFinishGood']);

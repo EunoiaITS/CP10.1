@@ -38,7 +38,7 @@ class QuarantineStocksController extends AppController
     }
 
     public function report(){
-        $quarantineStocks = $this->paginate($this->QuarantineStocks);
+        $quarantineStocks = $this->paginate($this->QuarantineStocks->find('all',['order'=>['QuarantineStocks.id'=>'desc']]));
 
         $this->set(compact('quarantineStocks'));
         $this->set('_serialize', ['quarantineStocks']);

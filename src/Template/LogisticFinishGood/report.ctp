@@ -30,9 +30,9 @@
                         </tr>
                         </thead>
                         <tbody class="stock-td">
-                        <?php foreach($logisticFinishGood as $data): ?>
+                        <?php $count=0; foreach($logisticFinishGood as $data): $count++;?>
                             <tr>
-                                <td><?= $this->Number->Format($data->id); ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($data->del_date); ?></td>
                                 <td><?= $this->Number->Format($data->id); ?></td>
                                 <td><?= h($data->del_order_no); ?></td>

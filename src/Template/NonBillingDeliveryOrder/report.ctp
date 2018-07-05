@@ -19,9 +19,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($nbdoReport as $nr): ?>
+                        <?php $count=0; foreach ($nbdoReport as $nr): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($nr->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($nr->date) ?></td>
                                 <td><?= h($nr->do_no) ?></td>
                                 <td><?= h($nr->part_no) ?></td>

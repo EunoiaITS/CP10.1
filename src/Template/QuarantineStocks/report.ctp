@@ -24,9 +24,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($quarantineStocks as $qs): ?>
+                        <?php $count = 0; foreach ($quarantineStocks as $qs): $count ++;?>
                             <tr>
-                                <td><?= $this->Number->format($qs->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($qs->date) ?></td>
                                 <td><?= h($qs->tender_no) ?></td>
                                 <td><?= h($qs->prn_no) ?></td>

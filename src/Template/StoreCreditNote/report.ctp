@@ -18,9 +18,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($scnData as $sd): ?>
+                        <?php $count=0; foreach ($scnData as $sd): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($sd->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($sd->date) ?></td>
                                 <td><?= h($sd->ref_no) ?></td>
                                 <td><?= h($sd->pic) ?></td>

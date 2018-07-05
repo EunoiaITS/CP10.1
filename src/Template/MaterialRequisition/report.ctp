@@ -22,9 +22,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($dbData as $data): ?>
+                        <?php $count=0; foreach ($dbData as $data): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($data->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($data->date_issue) ?></td>
                                 <td><?= $this->Number->format($data->id) ?></td>
                                 <td><?= h($data->ccar_no) ?></td>

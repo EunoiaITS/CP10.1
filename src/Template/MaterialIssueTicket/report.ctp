@@ -20,9 +20,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($materialIssueTicket as $mit): ?>
+                        <?php $count=0; foreach ($materialIssueTicket as $mit): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($mit->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($mit->date) ?></td>
                                 <td><?= h($mit->section) ?></td>
                                 <td><?= h($mit->mit_no) ?></td>

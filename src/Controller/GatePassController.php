@@ -39,7 +39,7 @@ class GatePassController extends AppController
 
     public function report(){
         $this->loadModel('LogisticFinishGood');
-        $gpData = $this->paginate($this->GatePass);
+        $gpData = $this->paginate($this->GatePass->find('all',['order'=>['GatePass.id'=>'desc']]));
         $finalData = array();
         $eachData = array();
 

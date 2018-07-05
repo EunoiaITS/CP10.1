@@ -22,9 +22,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($gtrData as $gd): ?>
+                        <?php $count=0; foreach ($gtrData as $gd): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($gd->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td><?= h($gd->date) ?></td>
                                 <td><?= h($gd->ref_no) ?></td>
                                 <td><?= h($gd->prepared_by) ?></td>

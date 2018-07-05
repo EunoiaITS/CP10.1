@@ -196,6 +196,12 @@ button i{
     -webkit-transition:all 0.3s ease-in-out ;
      font-size: 17px !important;
 }
+.user-label,
+.user-label-no{
+    width: 50%;
+    float: left;
+    font-size: 11px;
+}
 button.arrow i{
     transform:rotate(180deg);
     transition:all 0.3s ease-in-out;

@@ -58,7 +58,7 @@ class StoreCreditNoteController extends AppController
 
     public function report(){
         $this->loadModel('ScnReport');
-        $scnData = $this->paginate($this->ScnReport);
+        $scnData = $this->paginate($this->ScnReport->find('all',['order'=>['ScnReport.id'=>'desc']]));
         $this->set(compact('scnData'));
         $this->set('_serialize', ['scnData']);
     }

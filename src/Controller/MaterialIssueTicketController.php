@@ -26,7 +26,7 @@ class MaterialIssueTicketController extends AppController
     }
 
     public function report(){
-        $materialIssueTicket = $this->paginate($this->MaterialIssueTicket);
+        $materialIssueTicket = $this->paginate($this->MaterialIssueTicket->find('all',['order'=>['MaterialIssueTicket.id'=>'desc']]));
 
         $this->set(compact('materialIssueTicket'));
         $this->set('_serialize', ['materialIssueTicket']);
