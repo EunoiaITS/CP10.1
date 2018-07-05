@@ -40,9 +40,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($inventory as $inventory): ?>
+                        <?php $count=0; foreach ($inventory as $inventory): $count++;?>
                             <tr>
-                                <td><?= $this->Number->format($inventory->id) ?></td>
+                                <td><?= $count ?></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
