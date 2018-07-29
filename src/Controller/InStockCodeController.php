@@ -53,6 +53,37 @@ class InStockCodeController extends AppController
 
     public function stockOut(){
     	$so_no = null;
+
+        $urlToProd = 'http://productionmodule.acumenits.com/api/mit';
+
+        $optionsForProd = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'GET'
+            ]
+        ];
+        $contextForProd  = stream_context_create($optionsForProd);
+        $resultFromProd = file_get_contents($urlToProd, false, $contextForProd);
+        if ($resultFromProd === FALSE) {
+            echo 'ERROR!!';
+        }
+        $dataFromProd = json_decode($resultFromProd);
+
+        $urlToProd2 = 'http://productionmodule.acumenits.com/api/prn';
+
+        $optionsForProd2 = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'GET'
+            ]
+        ];
+        $contextForProd2  = stream_context_create($optionsForProd2);
+        $resultFromProd2 = file_get_contents($urlToProd2, false, $contextForProd2);
+        if ($resultFromProd2 === FALSE) {
+            echo 'ERROR!!';
+        }
+        $dataFromProd2 = json_decode($resultFromProd2);
+
         $urlToEng = 'http://salesmodule.acumenits.com/sales-order/all-po';
 
 
@@ -86,6 +117,8 @@ class InStockCodeController extends AppController
         $this->set('_serialize', ['productMasterlist']);
         $this->set('part_no', $part_no);
         $this->set('part_name', $part_name);
+        $this->set('mit_data',$dataFromProd);
+        $this->set('prn_data',$dataFromProd2);
         $this->set('pic_store', $this->Auth->user('username'));
         $this->set('so_no', $so_no);
     }
