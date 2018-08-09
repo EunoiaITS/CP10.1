@@ -14,8 +14,8 @@
                             <th>Transporter</th>
                             <th>Vehicle No</th>
                             <th>FG Code</th>
-                            <th>Seriel No</th>
-                            <th>Qty</th>
+                            <th>Serial No</th>
+                            <th>Quantity</th>
                             <th>Purpose of Transferred</th>
                             <th>Remarks</th>
                             <th>View</th>

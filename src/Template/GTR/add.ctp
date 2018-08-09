@@ -97,7 +97,7 @@
                                 <input name="fg_code" type="text" class="form-control input-bill  fright-input " id="fg-code-goods" data-validation="required">
                             </div>
                             <div class="form-group">
-                                <label class="fleft-label fleft-label-transport " for="seriel-goods">Seriel No <span class="fright">:</span></label>
+                                <label class="fleft-label fleft-label-transport " for="seriel-goods">Serial No <span class="fright">:</span></label>
                                 <input name="ser_no" type="text" class="form-control input-bill  fright-input" id="seriel-goods" data-validation="required"/>
                             </div>
                             <div class="form-group">
@@ -119,7 +119,7 @@
                                 <th>Quantity</th>
                                 <th>Product</th>
                                 <th>FG Code</th>
-                                <th>Seriel Number</th>
+                                <th>Serial Number</th>
                                 <th>Description</th>
                                 <th>Remarks</th>
                             </tr>

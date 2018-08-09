@@ -12,7 +12,7 @@
                             <th><?= $this->Paginator->sort('part_name') ?></th>
                             <th><?= $this->Paginator->sort('zon') ?></th>
                             <th><?= $this->Paginator->sort('rack') ?></th>
-                            <th><?= $this->Paginator->sort('bn') ?></th>
+                            <th><?= $this->Paginator->sort('bin') ?></th>
                             <th><?= $this->Paginator->sort('product_level') ?></th>
                             <th><?= $this->Paginator->sort('uom') ?></th>
                             <th><?= $this->Paginator->sort('min_stock') ?></th>

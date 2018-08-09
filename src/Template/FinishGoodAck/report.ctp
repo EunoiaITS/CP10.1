@@ -12,7 +12,7 @@
                             <th>Version</th>
                             <th>Type</th>
                             <th>Quantity</th>
-                            <th>Seriel Number</th>
+                            <th>Serial Number</th>
                             <th>Date of Manufacture</th>
                             <th>PI Date</th>
                             <th>PIC PI</th>

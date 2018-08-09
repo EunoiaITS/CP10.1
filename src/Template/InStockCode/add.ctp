@@ -29,8 +29,8 @@
                                 <input name="rack" type="text" class="form-control fright-input search-data" id="rack" >
                             </div>
                             <div class="form-group">
-                                <label class="fleft-label" for="bn">Bn <span class="fright">:</span></label>
-                                <input name="bn" type="text" class="form-control fright-input search-data" id="bn" >
+                                <label class="fleft-label" for="bin">Bin <span class="fright">:</span></label>
+                                <input name="bn" type="text" class="form-control fright-input search-data" id="bin" >
                             </div>
                             <div class="form-group">
                                 <label class="fleft-label" for="p_level">Product level <span class="fright">:</span></label>

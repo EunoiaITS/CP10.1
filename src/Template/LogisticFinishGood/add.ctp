@@ -46,11 +46,11 @@
                                 <input type="text" class="datepicker-f form-control input-bill fright-input" id="d-date" name="coll_date" data-validation="required"/>
                             </div>
                             <div class="form-group">
-                                <label class="fleft-label fleft-label-transport " for="col-time">Collection time <span class="fright">:</span></label>
+                                <label class="fleft-label fleft-label-transport " for="col-time">Collection Time <span class="fright">:</span></label>
                                 <input type="text" class="timepicker-f form-control input-bill fright-input" id="col-time" name="coll_time" data-validation="required">
                             </div>
                             <div class="form-group">
-                                <label class="fleft-label fleft-label-transport " for="col-form">Collection Form <span class="fright">:</span></label>
+                                <label class="fleft-label fleft-label-transport " for="col-form">Collection From <span class="fright">:</span></label>
                                 <input name="coll_form" type="text" class="form-control input-bill fright-input" id="col-form" data-validation="required">
                             </div>
                             <div class="form-group">

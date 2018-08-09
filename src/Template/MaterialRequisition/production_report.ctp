@@ -25,7 +25,7 @@
                         <th rowspan="2">Part No</th>
                         <th rowspan="2">Description</th>
                         <th rowspan="2">Uom</th>
-                        <th rowspan="2">QTY</th>
+                        <th rowspan="2">Quantity</th>
                         <th rowspan="2">Document</th>
                         <th rowspan="2">Create By</th>
                         <th rowspan="2">Department</th>
@@ -40,7 +40,7 @@
                         <th>Ack Status</th>
                         <th>Recevied By</th>
                         <th>Delivery Date</th>
-                        <th>Delivery Qty</th>
+                        <th>Delivery Quantity</th>
                         <th>Delivery Status</th>
                     </tr>
                     </thead>

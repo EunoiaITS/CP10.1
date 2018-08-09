@@ -18,7 +18,7 @@
                             <th>Collection date</th>
                             <th>Collection Time</th>
                             <th>Collection From</th>
-                            <th>Qty</th>
+                            <th>Quantity</th>
                             <th>Product Name</th>
                             <th>Driver's Name</th>
                             <th>Driver's Contact No</th>

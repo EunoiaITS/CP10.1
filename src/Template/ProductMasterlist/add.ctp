@@ -33,8 +33,8 @@
                                 <input  type="text" name="rack" class="form-control fright-input" id="rack">
                             </div>
                             <div class="form-group">
-                                <label class="fleft-label" for="bn">Bn <span class="fright">:</span></label>
-                                <input  type="text" name="bn" class="form-control fright-input" id="bn">
+                                <label class="fleft-label" for="bin">Bin <span class="fright">:</span></label>
+                                <input  type="text" name="bn" class="form-control fright-input" id="bin">
                             </div>
                             <div class="form-group">
                                 <label class="fleft-label" for="level">Level <span class="fright">:</span></label>

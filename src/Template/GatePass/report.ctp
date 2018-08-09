@@ -12,7 +12,7 @@
                             <th>Do No</th>
                             <th>Gate Pass No</th>
                             <th>Product Name</th>
-                            <th>Qty</th>
+                            <th>Quantity</th>
                             <th>Remarks</th>
                             <th>View</th>
                         </tr>

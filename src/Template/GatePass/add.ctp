@@ -36,7 +36,7 @@
                             <th>Do No</th>
                             <th>Product Name</th>
                             <th>Gate Pass No</th>
-                            <th>Qty</th>
+                            <th>Quantity</th>
                             <th>Remarks</th>
                         </tr>
                         </thead>

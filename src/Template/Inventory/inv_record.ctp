@@ -21,7 +21,7 @@
                             <th>Max Stock Level</th>
                             <th>Stock In</th>
                             <th>Stock Out</th>
-                            <th>Current Qty</th>
+                            <th>Current Quantity</th>
                         </tr>
                         </thead>
                         <tbody>

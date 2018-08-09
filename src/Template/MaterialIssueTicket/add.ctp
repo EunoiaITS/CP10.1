@@ -90,7 +90,7 @@
                             <thead>
                             <tr>
                                 <th>Version</th>
-                                <th>Qty</th>
+                                <th>Quantity</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -127,9 +127,9 @@
                     <th rowspan="3">Part No</th>
                     <th rowspan="3">Part Descriptions</th>
                     <th rowspan="3">Usages</th>
-                    <th rowspan="3">Request Qty</th>
-                    <th rowspan="3">Issued Qty</th>
-                    <th rowspan="3">Outstanding Qty</th>
+                    <th rowspan="3">Request Quantity</th>
+                    <th rowspan="3">Issued Quantity</th>
+                    <th rowspan="3">Outstanding Quantity</th>
                     <th colspan="5">Issuing date</th>
                 </tr>
                 <tr class="table-cells">

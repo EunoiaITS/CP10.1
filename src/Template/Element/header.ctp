@@ -83,7 +83,7 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="http://storemodule.acumenits.com/FinishGoodAck">Acknowledgement</a></li>
+                <li><a href="<?php echo $this->Url->build(['controller'=>FinishGoodAck]) ?>">Acknowledgement</a></li>
             </ul>
         </div>
         <div class="btn-group-vertical" role="group" class="dropdown">

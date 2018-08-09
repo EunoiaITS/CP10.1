@@ -125,8 +125,8 @@
                             <th>No</th>
                             <th>Part No</th>
                             <th>Part Name</th>
-                            <th>Qty Requested</th>
-                            <th>Qty Issued</th>
+                            <th>Quantity Requested</th>
+                            <th>Quantity Issued</th>
                             <th>Remarks</th>
                         </tr>
                         </thead>

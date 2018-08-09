@@ -66,12 +66,12 @@
                             <th>Date</th>
                             <th>MDR No</th>
                             <th>Vendor</th>
-                            <th>Qty</th>
+                            <th>Quantity</th>
                             <th>RTVN No</th>
                             <th>Part No</th>
                             <th>Part Name</th>
-                            <th>Qty Rec</th>
-                            <th>Qty O/S</th>
+                            <th>Quantity Rec</th>
+                            <th>Quantity O/S</th>
                         </tr>
                         </thead>
                         <tbody id="table-data">
